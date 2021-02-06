@@ -1,22 +1,19 @@
-# clojure-project
-
-A Clojure library designed to ... well, that part is up to you.
-
 ## Usage
 
-FIXME
+Clojure Sudoko solver. Solving is done randomly, meaning you are not guaranteed to get the same solution on the board twice if you solve it twice. 
 
-## License
+Theres some comments on functions in the code, but ill briefly describe key functionality here. 
 
-Copyright © 2021 FIXME
+Generating new boards is done by Solving an empty board (randomly) then replacing certain amounts with zeros. Randomness of 1 creates normal looking boards, with harder > 1 and easier < 1
 
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
+generate(width height randomness) 
 
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+Solving empty boards can be done with 
+
+main(width height)
+
+Solving given boards can be done with
+
+solveBoard(width height board) 
+
+where "board" is a 1d vector representing the board. 
